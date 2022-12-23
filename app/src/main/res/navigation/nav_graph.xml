@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/playerListFragment">
+    <fragment
+        android:id="@+id/playerListFragment"
+        android:name="com.example.democlashofbattle.ui.list.PlayerListFragment"
+        android:label="Liste des joueurs"
+        tools:layout="@layout/fragment_player_list">
+        <action
+            android:id="@+id/action_playerListFragment_to_editPlayerFragment"
+            app:destination="@id/editPlayerFragment" />
+        <action
+            android:id="@+id/action_playerListFragment_to_battleFragment"
+            app:destination="@id/battleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editPlayerFragment"
+        android:name="com.example.democlashofbattle.ui.edit.EditPlayerFragment"
+        android:label="Modifier le joueur"/>
+    <fragment
+        android:id="@+id/battleFragment"
+        android:name="com.example.democlashofbattle.ui.battle.BattleFragment"
+        android:label="Baston !"
+        tools:layout="@layout/fragment_battle" />
+</navigation>
